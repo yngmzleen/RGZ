@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+    <nav class="menu" id="menu">
+        <a href="index.html">О компании</a>
+        <a href="news.html">Новости</a>
+        <a href="currency.html">Курс валют</a>
+        <a href="contacts.html">Контактные данные</a>
+        <a href="video.html">Видео</a>
+    </nav>
+    <main>
+        <h1>Видео</h1>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer> 
+        (с) 2011-2024, АО Спектр Инвест
+        Все права защищены
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function toggleText(button) {
+            var newsCard = button.parentElement;
+            var shortText = newsCard.querySelector('.short');
+            var fullText = newsCard.querySelector('.full');
+            
+            if (fullText.style.display === 'none') {
+                fullText.style.display = 'block';
+                shortText.style.display = 'none';
+                button.innerText = 'скрыть';
+            } else {
+                fullText.style.display = 'none';
+                shortText.style.display = 'block';
+                button.innerText = 'показать полностью';
+            }
+        }
+    </script>
+
+    <style>
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .news-card h3 {
+            margin: 0 0 10px;
+        }
+        .news-card p {
+            margin: 0;
+        }
+        .show-button {
+            margin-top: 10px;
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="currency.html">Курс валют</a></li>
+            <li><a href="contacts.html">Контактные данные</a></li>
+            <li><a href="video.html">Видео</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Новости</h1>
+
+        <div class="news-card">
+            <h3>Спектр Инвест признана лучшим брокером года по версии Financial Times</h3>
+            <p>Дата: 10 января 2024</p>
+            <p class="short">Сегодня на ежегодной церемонии награждения Financial Times...</p>
+            <p class="full" style="display:none;">Сегодня на ежегодной церемонии награждения Financial Times, компания "Спектр Инвест" была признана лучшим брокером года.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест запустила инновационную платформу для розничных инвесторов</h3>
+            <p>Дата: 5 февраля 2024</p>
+            <p class="short">Компания "Спектр Инвест" объявила о запуске новой инновационной платформы...</p>
+            <p class="full" style="display:none;">Компания "Спектр Инвест" объявила о запуске новой инновационной платформы для розничных инвесторов. Новая платформа предоставляет пользователям доступ к широкому спектру финансовых инструментов, включая акции, облигации, ETF и многое другое.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест открыла представительство в Нью-Йорке</h3>
+            <p>Дата: 20 марта 2024</p>
+            <p class="short">В стремлении расширить свое присутствие на глобальных рынках, "Спектр Инвест"...</p>
+            <p class="full" style="display:none;">В стремлении расширить свое присутствие на глобальных рынках, "Спектр Инвест" открыла новое представительство в Нью-Йорке. Новый офис будет обслуживать клиентов из Северной Америки и предоставлять полный спектр инвестиционных услуг.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест увеличила прибыль на 30% в первом квартале 2024 года</h3>
+            <p>Дата: 15 апреля 2024</p>
+            <p class="short">Компания "Спектр Инвест" опубликовала финансовые результаты за первый квартал 2024...</p>
+            <p class="full" style="display:none;">Компания "Спектр Инвест" опубликовала финансовые результаты за первый квартал 2024 года, сообщив о росте прибыли на 30% по сравнению с аналогичным периодом прошлого года.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест стала генеральным спонсором Международного инвестиционного форума</h3>
+            <p>Дата: 1 мая 2024</p>
+            <p class="short">В рамках своего стратегического партнерства, "Спектр Инвест" стала генеральным спонсором Международного инвестиционного форума...</p>
+            <p class="full" style="display:none;">В рамках своего стратегического партнерства, "Спектр Инвест" стала генеральным спонсором Международного инвестиционного форума, который пройдет в Москве в сентябре 2024 года.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест объявила о запуске нового инвестиционного фонда для стартапов</h3>
+            <p>Дата: 10 июня 2024</p>
+            <p class="short">Компания "Спектр Инвест" объявила о запуске нового инвестиционного фонда...</p>
+            <p class="full" style="display:none;">Компания "Спектр Инвест" объявила о запуске нового инвестиционного фонда, ориентированного на поддержку и развитие стартапов.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест внедрила искусственный интеллект для анализа рынка акций</h3>
+            <p>Дата: 25 июля 2024</p>
+            <p class="short">"Спектр Инвест" внедрила систему искусственного интеллекта для анализа рынка акций. Новая технология позволяет...</p>
+            <p class="full" style="display:none;">"Спектр Инвест" внедрила систему искусственного интеллекта для анализа рынка акций. Новая технология позволяет проводить глубокий анализ финансовых данных, прогнозировать тренды и оценивать риски с высокой точностью.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест провела бесплатные семинары по финансовой грамотности в Москве</h3>
+            <p>Дата: 5 сентября 2024</p>
+            <p class="short">В рамках программы корпоративной социальной ответственности, "Спектр Инвест" провела серию бесплатных семинаров...</p>
+            <p class="full" style="display:none;">В рамках программы корпоративной социальной ответственности, "Спектр Инвест" провела серию бесплатных семинаров по финансовой грамотности для жителей Москвы. </p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест заключила стратегическое партнерство с крупным азиатским банком</h3>
+            <p>Дата: 18 октября 2024</p>
+            <p class="short">"Спектр Инвест" заключила стратегическое партнерство с одним из крупнейших банков Азии...</p>
+            <p class="full" style="display:none;">"Спектр Инвест" заключила стратегическое партнерство с одним из крупнейших банков Азии, что позволит компании расширить свои возможности на азиатском рынке.</p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+        <div class="news-card">
+            <h3>Спектр Инвест вошла в топ-10 крупнейших брокеров Европы по версии Bloomberg</h3>
+            <p>Дата: 3 ноября 2024</p>
+            <p class="short">Согласно последнему рейтингу Bloomberg, "Спектр Инвест" вошла в топ-10 крупнейших брокеров Европы...</p>
+            <p class="full" style="display:none;">Согласно последнему рейтингу Bloomberg, "Спектр Инвест" вошла в топ-10 крупнейших брокеров Европы. Этот результат стал возможен благодаря значительному росту клиентской базы, расширению спектра услуг и внедрению передовых технологий. </p>
+            <div class="show-button" onclick="toggleText(this)">показать полностью</div>
+        </div>
+
+    </main>
+    <footer> 
+        (с) 2011-2024, АО Спектр Инвест
+        Все права защищены
+    </footer>
+
+</body>
+</html>
