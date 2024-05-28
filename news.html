@@ -41,6 +41,7 @@
             border: 1px solid #ddd;
             padding: 15px;
             margin-bottom: 10px;
+            border-radius: 25px;
         }
         .news-card h3 {
             margin: 0 0 10px;
@@ -49,15 +50,26 @@
             margin: 0;
         }
         .show-button {
+            height: 35px;
+            width: 270px;
             margin-top: 10px;
             cursor: pointer;
-            color: blue;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0); 
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+
+        .show-button:hover {
+            background-color: rgb(90, 137, 255);
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="Logo">
+        <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     <nav class="menu" id="menu">
@@ -153,10 +165,13 @@
         </div>
 
     </main>
-    <footer> 
-        (с) 2011-2024, АО Спектр Инвест
-        Все права защищены
+    <footer>
+        <div>
+            <p>(с) 2011-2024, АО Спектр Инвест </p>
+            <p>Наш адрес: 123022, г. Москва, ул. 2-я Звенигородская, д. 13, стр. 41, 4 этаж, помещение 1 </p>
+            <p>Телефон: +7 (495) 902-69-09</p>
+        </div>
+        <img src="footer.jpeg" alt="Footer Image">
     </footer>
-
 </body>
 </html>

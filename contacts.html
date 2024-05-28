@@ -8,6 +8,25 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon-16x16.png">
     <link rel="shortcut icon" href="favicon-32x32.png">
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var submitButton = document.getElementById('submitButton');
+            submitButton.value = 'Сообщение отправлено';
+            submitButton.disabled = true;
+        });
+    </script>
+
     <style>
         header {
             background-color: rgb(255, 255, 255);
@@ -16,10 +35,11 @@
             padding: 15px; 
             font-size: 16pt;
             opacity: 0.7;
+            position: relative;
         }
 
         body {
-            background-color: rgb(254, 252, 255);
+            background-color: rgb(255, 255, 255);
             color: rgb(45, 45, 45);
             font-family: century gothic;
             margin: 0px;
@@ -33,19 +53,6 @@
             margin-bottom: 30px;
         }   
 
-        footer {
-            background-color: rgb(0, 0, 0); 
-            color: rgb(255, 255, 255); 
-            font-family: century gothic;
-            padding: 15px; 
-            font-size: 16pt; 
-            text-align: right; 
-            bottom: 0;
-            right: 0;
-            left: 0;
-            opacity: 0.7;
-        }
-
         .photo {
             display: inline-block;
             margin-left: auto;
@@ -57,11 +64,15 @@
             font-size: 24px;
             color: black;
         }
+
+        .photo {
+            width: 800px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="Logo">
+        <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     <nav class="menu" id="menu">
@@ -81,40 +92,18 @@
             <p>Телефон: 8 (495) 902-69-09</p>
             <p>Email: info@spectrinvest.ru</p>
         </div>
-        <div>
-            <h2>Свяжитесь с нами</h2>
-            <form id="contactForm" action="send_message.php" method="post">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="message">Сообщение:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-                <input type="submit" value="Отправить" id="submitButton">
-            </form>
+        <div class="photo">
+            <h2>Мы находимся тут</h2>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5321bf3181e83798588d5ea28c56062260c749f169f454133e48d00423ab09fe&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true" width="500" height="400" frameborder="0"></iframe>
         </div>
     </main>
-    <footer> 
-        (с) 2011-2024, АО Спектр Инвест
-        Все права защищены
+    <footer>
+        <div>
+            <p>(с) 2011-2024, АО Спектр Инвест </p>
+            <p>Наш адрес: 123022, г. Москва, ул. 2-я Звенигородская, д. 13, стр. 41, 4 этаж, помещение 1 </p>
+            <p>Телефон: +7 (495) 902-69-09</p>
+        </div>
+        <img src="footer.jpeg" alt="Footer Image">
     </footer>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var submitButton = document.getElementById('submitButton');
-            submitButton.value = 'Сообщение отправлено';
-            submitButton.disabled = true;
-        });
-    </script>
 </body>
 </html>
