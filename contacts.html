@@ -1,109 +1,102 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контактные данные</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon-32x32.png">
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Контактные данные</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon-16x16.png">
+        <link rel="shortcut icon" href="favicon-32x32.png">
 
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById('menu');
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
             }
-        }
+        </script>
 
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var submitButton = document.getElementById('submitButton');
-            submitButton.value = 'Сообщение отправлено';
-            submitButton.disabled = true;
-        });
-    </script>
+        <style>
+            header {
+                background-color: rgb(255, 255, 255);
+                color: rgb(255, 255, 255);
+                font-family: century gothic;
+                padding: 15px; 
+                font-size: 16pt;
+                opacity: 0.7;
+                position: relative;
+            }
 
-    <style>
-        header {
-            background-color: rgb(255, 255, 255);
-            color: rgb(255, 255, 255);
-            font-family: century gothic;
-            padding: 15px; 
-            font-size: 16pt;
-            opacity: 0.7;
-            position: relative;
-        }
+            body {
+                background-color: rgb(255, 255, 255);
+                color: rgb(45, 45, 45);
+                font-family: century gothic;
+                margin: 0px;
+            }
 
-        body {
-            background-color: rgb(255, 255, 255);
-            color: rgb(45, 45, 45);
-            font-family: century gothic;
-            margin: 0px;
-        }
+            main {
+                margin: 10px 20px 45px;
+            }
 
-        main {
-            margin: 10px 20px 45px;
-        }
+            div {
+                margin-bottom: 30px;
+            }   
 
-        div {
-            margin-bottom: 30px;
-        }   
+            .photo {
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-        .photo {
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+            .menu-icon {
+                cursor: pointer;
+                font-size: 24px;
+                color: black;
+            }
 
-        .menu-icon {
-            cursor: pointer;
-            font-size: 24px;
-            color: black;
-        }
-
-        .photo {
-            width: 800px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </header>
-    <nav class="menu" id="menu">
-        <ul>
-            <li><a href="index.html">О компании</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="currency.html">Курс валют</a></li>
-            <li><a href="contacts.html">Контактные данные</a></li>
-            <li><a href="video.html">Видео</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Контактные данные</h1>
-        <div>
-            <h2>Наш офис</h2>
-            <p>Адрес: 123022, Москва, ул, 4 этаж, помещение 1, 2-я Звенигородская ул., 13, стр. 41, Москва, 123022</p>
-            <p>Телефон: 8 (495) 902-69-09</p>
-            <p>Email: info@spectrinvest.ru</p>
-        </div>
-        <div class="photo">
-            <h2>Мы находимся тут</h2>
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5321bf3181e83798588d5ea28c56062260c749f169f454133e48d00423ab09fe&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true" width="500" height="400" frameborder="0"></iframe>
-        </div>
-    </main>
-    <footer>
-        <div>
-            <p>(с) 2011-2024, АО Спектр Инвест </p>
-            <p>Наш адрес: 123022, г. Москва, ул. 2-я Звенигородская, д. 13, стр. 41, 4 этаж, помещение 1 </p>
-            <p>Телефон: +7 (495) 902-69-09</p>
-        </div>
-        <img src="footer.jpeg" alt="Footer Image">
-    </footer>
-</body>
-</html>
+            .photo {
+                width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </header>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">О компании</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="currency.html">Курс валют</a></li>
+                <li><a href="contacts.html">Контактные данные</a></li>
+                <li><a href="video.html">Видео</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Контактные данные</h1>
+            <div>
+                <h2>Наш офис</h2>
+                <p>Адрес: 123022, Москва, ул, 4 этаж, помещение 1, 2-я Звенигородская ул., 13, стр. 41, Москва, 123022</p>
+                <p>Телефон: 8 (495) 902-69-09</p>
+                <p>Email: info@spectrinvest.ru</p>
+            </div>
+            <div class="photo">
+                <h2>Мы находимся тут</h2>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5321bf3181e83798588d5ea28c56062260c749f169f454133e48d00423ab09fe&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true" width="500" height="400" frameborder="0"></iframe>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>(с) 2011-2024, АО Спектр Инвест </p>
+                <p>Наш адрес: 123022, г. Москва, ул. 2-я Звенигородская, д. 13, стр. 41, 4 этаж, помещение 1 </p>
+                <p>Телефон: +7 (495) 902-69-09</p>
+            </div>
+            <img src="footer.jpeg" alt="Footer Image">
+        </footer>
+    </body>
+    </html>
